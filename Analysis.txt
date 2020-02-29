@@ -1,0 +1,20 @@
+Big O Notation:
+
+Task 0:
+Time: O(1) -> The access time is constant time since you are accessing them via an index and not looping over the entire record.
+Space: O(1) -> We didn't create a new list of n records.
+Task 1:
+Time: O(n) -> The Big O is of O(n), i.e., order of n as we are looping over n.
+Space: O(1) -> We didn't create a new list of n records.
+
+Task 2:
+Time: O(n) -> The Big O is of O(n), i.e., order of n as we are looping over n.
+Space: O(n) -> We created a new datastructure, a dictionary which is of order n.
+
+Task 3:
+Time: O(n) -> Both part A and B are O(n) as there is only one for loop.
+Space: O(n) -> We created a new set.
+
+Task 4:
+Time: O(n) -> We are looping over n a couple of times.
+Space: O(n) -> We created a few new arrays of order n.
