@@ -32,7 +32,6 @@ for i in range(len(texts)):
     senders_texts.append(texts[i][0])
     receivers_texts.append(texts[i][1])
 
-texters = list(set(senders_texts).intersection(set(receivers_texts)))
 
 senders_calls = []
 receivers_calls = []
@@ -41,9 +40,9 @@ for i in range(len(calls)):
     senders_calls.append(calls[i][0])
     receivers_calls.append(calls[i][1])
 
-callers = list(set(senders_calls).intersection(set(receivers_calls)))
 
-unique_nums = list(set(texters).intersection(set(callers)))
-
+senders_only = list(set(senders_calls) - set(receivers_calls) - set(senders_texts) - set(receivers_texts))
+sorted_senders_only = sorted(senders_only)
 print(f"These numbers could be telemarketers: ")
-print("\n".join(unique_nums)) # print on a new line
+print("\n".join(sorted_senders_only))
+
