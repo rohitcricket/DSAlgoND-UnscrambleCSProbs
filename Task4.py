@@ -45,4 +45,3 @@ senders_only = list(set(senders_calls) - set(receivers_calls) - set(senders_text
 sorted_senders_only = sorted(senders_only)
 print(f"These numbers could be telemarketers: ")
 print("\n".join(sorted_senders_only))
-

@@ -51,7 +51,8 @@ for call in calls:
     # check if caller is from bangalore
     if call[0].startswith("(080)"):
       if call[1].startswith('(0'): # check if caller is from fixed line
-        bangSet.add(call[1][:5])
+        j = call[1].index(')')
+        bangSet.add(call[1][:(j+1)])
       elif call[1].startswith('7'): # check if caller is from mobile
         bangSet.add(call[1][:4])
       elif call[1].startswith('8'): # check if caller is from mobile
@@ -64,6 +65,7 @@ print(f"The numbers called by people in Bangalore have codes:")
 
 for i in bangSet:
   print(i)
+
 
 
 # Part B
