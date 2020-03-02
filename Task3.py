@@ -63,9 +63,8 @@ for call in calls:
 
 print(f"The numbers called by people in Bangalore have codes:")
 
-for i in bangSet:
-  print(i)
-
+sorted_bangs = sorted(bangSet)
+print("\n".join(sorted_bangs))
 
 
 # Part B
